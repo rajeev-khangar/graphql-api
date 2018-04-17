@@ -1,0 +1,12 @@
+.container
+  .container
+    %h1 Create Expense
+    %br
+      = bootstrap_form_for Expense.new, remote: true, html: {id: "expenseForm"} do |form|
+        = form.text_field :item_name
+        = form.text_field :description
+        = form.date_field :date
+        = form.text_field :cost
+        = form.number_field :quantity
+        = form.text_field :subtotal
+      %button.btn-btn-primary#expenseSubmit Create
